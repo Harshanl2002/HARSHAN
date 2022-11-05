@@ -44,6 +44,7 @@ html {
     padding-bottom: 4px;
     text-decoration: none;
     color: #000;
+    font-weight: bold;
     font-family: 'Ubuntu', sans-serif;
     text-transform: uppercase;
     display: inline-block;
@@ -87,7 +88,7 @@ html {
 }
 
 .nav .menubar span {
-    margin: 1.5px;
+    margin: 2px;
     padding: 2px;
     display: block;
     width: 30px;
@@ -106,7 +107,7 @@ html {
     }
 
     .nav ul li a {
-        font-size: clac(.5vw - .5rem);
+        font-size: clac(1vw - .5rem);
     }
 
     .nav ul li a:after {
@@ -167,7 +168,7 @@ html {
     .nav ul li a {
         width: 100%;
         margin-left: -20px;
-        font-size: 1rem;
+        font-size: 1.5rem;
         padding: 6vw;
     }
 
