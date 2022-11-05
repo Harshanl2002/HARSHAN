@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Ubuntu:wght@400;500;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 10px;
+}
+
+.nav {
+    width: 100%;
+    height: 10vh;
+    position: absolute;
+    /* border: 1px #000 solid; */
+}
+
+.nav .logo {
+    margin: 8px 60px;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Poppins', sans-serif;
+    float: left;
+}
+
+.nav ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    margin-top: 18px;
+    margin-right: 20px;
+}
+
+.nav ul li {
+    list-style: none;
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    /* border: 1px #000 solid; */
+    font-size: 1.2rem;
+    padding-bottom: 4px;
+    text-decoration: none;
+    color: #000;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 800;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+}
+
+.nav ul li a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #000;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav ul li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.nav .menubar {
+    display: block;
+    float: right;
+    margin-top: 18px;
+    margin-right: 20px;
+    display: none;
+}
+
+.nav .close {
+    display: block;
+    float: right;
+    margin-top: 10px;
+    margin-right: 10px;
+    display: none;
+}
+
+.nav .menubar span {
+    margin: 1px;
+    padding: 2.5px;
+    display: block;
+    width: 30px;
+    border-radius: 4px;
+    background-color: #000;
+}
+
+.nav .close {
+    width: 30px;
+    font-size: 2rem;
+}
+
+@media only screen and (max-width: 900px) {
+    .nav .logo {
+        font-size: 1.7rem;
+    }
+
+    .nav ul li a {
+        margin-top: 2px;
+        font-size: .8rem;
+    }
+
+    .nav ul li a:after {
+        content: '';
+        position: absolute;
+        width: 100%;
+        transform: scaleX(0);
+        height: 2px;
+        bottom: 0;
+        left: 0;
+        background-color: #000;
+        transform-origin: bottom right;
+        transition: transform 0.25s ease-out;
+    }
+
+    .nav ul li a:hover:after {
+        transform: scaleX(1);
+        transform-origin: bottom left;
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .nav {
+        border: 1px #000 solid;
+    }
+
+    .nav .logo {
+        margin-top: 2vh;
+        margin-left: 30vw;
+        font-size: 1.5rem;
+        float: left;
+    }
+
+    .nav .menubar {
+        top: 8px;
+        margin-right: 30px;
+        display: block;
+        /* border: 1px #000 solid; */
+        display: none;
+    }
+
+    .nav .close {
+        top: 8px;
+        margin-right: 30px;
+        display: block;
+    }
+
+    .nav ul {
+        width: 100%;
+        text-align: center;
+        display: block;
+        /* border: 1px #000 solid; */
+
+    }
+
+    .nav ul li a {
+        width: 100%;
+        margin-left: -20px;
+        font-size: 1rem;
+        padding: 9vw;
+    }
+
+    .nav ul li a:hover {
+        background-color: blue;
+    }
+
+    .nav ul li a:hover::after {
+        display: none;
+    }
+}
