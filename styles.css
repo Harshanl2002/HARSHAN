@@ -132,12 +132,14 @@ body {
 @media only screen and (max-width: 650px) {
     .nav {
         margin: 0;
+        text-align: center;
         /* border: 1px #000 solid; */
     }
 
     .nav .logo {
         margin-top: 2vh;
-        margin-left: 30vw;
+        margin-left: auto;
+        text-align: center;
         font-size: 1.5rem;
         float: left;
     }
@@ -171,7 +173,7 @@ body {
         width: 100%;
         margin-left: -20px;
         font-size: 1rem;
-        padding: 9vw;
+        padding: 6vw;
     }
 
     .nav ul li a:hover {
