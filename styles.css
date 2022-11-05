@@ -11,40 +11,49 @@ html {
 }
 
 .nav {
+
     width: 100%;
     height: 10vh;
-    position: absolute;
+    position: sticky;
+    background-color: aqua;
+}
+
+.nav nav {
+    width: 95%;
+    height: 10vh;
+    margin: auto;
+    background-color: blanchedalmond;
+    display: flex;
+    justify-content: space-between;
 }
 
 .nav .logo {
-    margin: 8px 0px 0px 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
     font-size: calc(1vw + 1.5rem);
     font-weight: 600;
     text-transform: uppercase;
     font-family: 'Poppins', sans-serif;
-    float: left;
 }
 
 .nav ul {
+    width: 50vw;
+    background-color: beige;
     display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    margin-top: 18px;
-    margin-right: 20px;
+    justify-content: space-around;
+    align-items: center;
 }
 
 .nav ul li {
     list-style: none;
-    margin-left: 20px;
 }
 
 .nav ul li a {
     font-size: calc(1vw + .8rem);
-    margin-right: 1rem;
-    padding-bottom: 4px;
+    padding-bottom: 8px;
     text-decoration: none;
     color: #000;
-    font-weight: bold;
     font-family: 'Ubuntu', sans-serif;
     text-transform: uppercase;
     display: inline-block;
@@ -56,7 +65,7 @@ html {
     position: absolute;
     width: 100%;
     transform: scaleX(0);
-    height: 2px;
+    height: 5px;
     bottom: 0;
     left: 0;
     background-color: #000;
@@ -70,9 +79,9 @@ html {
 }
 
 .nav .menubar {
-    display: block;
-    float: right;
-    margin-top: 18px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
     margin-right: 20px;
     cursor: pointer;
     display: none;
@@ -80,8 +89,8 @@ html {
 
 .nav .close {
     display: block;
-    float: right;
-    margin-top: 10px;
+    justify-content: space-between;
+    margin-top: 20px;
     margin-right: 10px;
     cursor: pointer;
     display: none;
@@ -108,24 +117,6 @@ html {
 
     .nav ul li a {
         font-size: clac(1vw - .5rem);
-    }
-
-    .nav ul li a:after {
-        content: '';
-        position: absolute;
-        width: 100%;
-        transform: scaleX(0);
-        height: 2px;
-        bottom: 0;
-        left: 0;
-        background-color: #000;
-        transform-origin: bottom right;
-        transition: transform 0.25s ease-out;
-    }
-
-    .nav ul li a:hover:after {
-        transform: scaleX(1);
-        transform-origin: bottom left;
     }
 }
 
@@ -156,17 +147,16 @@ html {
     }
 
     .nav ul {
-        top: 10vh;
         width: 100%;
-        margin-top: 30px;
-        text-align: center;
-        display: none;
-        overflow: hidden;
-
+        position: fixed;
+        top: 10vh;
+        right: 0px;
+        flex-direction: column;
+        height: 90vh;
+        transform: translateX(100%);
     }
 
     .nav ul li a {
-        width: 100%;
         margin-left: -20px;
         font-size: 1.5rem;
         padding: 6vw;
