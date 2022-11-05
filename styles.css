@@ -106,7 +106,7 @@ body {
     }
 
     .nav ul li a {
-        margin-top: 0px;
+        margin-top: 20px;
         font-size: .8rem;
     }
 
@@ -157,10 +157,12 @@ body {
     }
 
     .nav ul {
+        top: 10vh;
         width: 100%;
         margin-top: 30px;
         text-align: center;
         display: block;
+        overflow: hidden;
         /* border: 1px #000 solid; */
 
     }
