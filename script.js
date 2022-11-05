@@ -17,12 +17,12 @@ mc.onclick = () => {
     l.style.display = "none";
 }
 
-console.log(w);
-if (w <= 650) {
-    l.onclick = () => {
-        mnbar.style.display = "block";
-        n.style.height = "10%";
-        mc.style.display = "none";
-        l.style.display = "none";
-    }
-}
+// console.log(w);
+// if (w <= 650) {
+//     l.onclick = () => {
+//         mnbar.style.display = "block";
+//         n.style.height = "10%";
+//         mc.style.display = "none";
+//         l.style.display = "none";
+//     }
+// }
