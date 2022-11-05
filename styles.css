@@ -132,7 +132,7 @@ body {
 @media only screen and (max-width: 650px) {
     .nav {
         margin: 0;
-        border: 1px #000 solid;
+        /* border: 1px #000 solid; */
     }
 
     .nav .logo {
