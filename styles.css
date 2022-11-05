@@ -75,6 +75,7 @@ body {
     float: right;
     margin-top: 18px;
     margin-right: 20px;
+    cursor: pointer;
     display: none;
 }
 
@@ -83,6 +84,7 @@ body {
     float: right;
     margin-top: 10px;
     margin-right: 10px;
+    cursor: pointer;
     display: none;
 }
 
@@ -95,7 +97,7 @@ body {
     background-color: #000;
 }
 
-.nav .close {
+.nav .close span {
     width: 30px;
     font-size: 2rem;
 }
@@ -138,7 +140,7 @@ body {
 
     .nav .logo {
         margin-top: 2vh;
-        margin-left: auto;
+        margin-left: 30vw;
         text-align: center;
         font-size: 1.5rem;
         float: left;
@@ -148,14 +150,15 @@ body {
         top: 8px;
         margin-right: 30px;
         display: block;
+
         /* border: 1px #000 solid; */
-        display: none;
+        /* display: none; */
     }
 
     .nav .close {
         top: 8px;
         margin-right: 20px;
-        display: block;
+        display: none;
     }
 
     .nav ul {
@@ -163,7 +166,7 @@ body {
         width: 100%;
         margin-top: 30px;
         text-align: center;
-        display: block;
+        display: none;
         overflow: hidden;
         /* border: 1px #000 solid; */
 
