@@ -14,7 +14,6 @@ html {
     width: 100%;
     height: 10vh;
     position: absolute;
-    /* border: 1px #000 solid; */
 }
 
 .nav .logo {
@@ -40,14 +39,12 @@ html {
 }
 
 .nav ul li a {
-    /* border: 1px #000 solid; */
     font-size: calc(1vw + .8rem);
     margin-right: 1rem;
     padding-bottom: 4px;
     text-decoration: none;
     color: #000;
     font-family: 'Ubuntu', sans-serif;
-    /* font-weight: bold; */
     text-transform: uppercase;
     display: inline-block;
     position: relative;
@@ -135,7 +132,6 @@ html {
     .nav {
         margin: 0;
         text-align: center;
-        /* border: 1px #000 solid; */
     }
 
     .nav .logo {
@@ -150,8 +146,6 @@ html {
         top: 8px;
         margin-right: 20px;
         display: block;
-        /* border: 1px #000 solid; */
-        /* display: none; */
     }
 
     .nav .close {
@@ -167,7 +161,6 @@ html {
         text-align: center;
         display: none;
         overflow: hidden;
-        /* border: 1px #000 solid; */
 
     }
 
