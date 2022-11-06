@@ -132,7 +132,7 @@ html {
     .nav .menubar {
         display: block;
         /* transform: translate(-10px, 12px); */
-        border: 1px #000 solid;
+        /* border: 1px #000 solid; */
         transition: all .5s linear;
     }
 
