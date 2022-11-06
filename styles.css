@@ -31,6 +31,10 @@ body {
     width: 100%;
     height: 10vh;
     position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 99;
     /* background: var(--sc); */
     /* background-color: rgb(247, 240, 240, .2); */
     /* background-color: transparent; */
@@ -179,9 +183,7 @@ nav {
     min-height: 500px;
     width: 100%;
     display: flex;
-    /* background-image: radial-gradient(circle, #d1e7fe, #d4e3fe, #d9defc, #dfd9f9, #e5d4f4, #e8d6f3, #ebd8f3, #eedaf2, #f0e4f7, #f3edfa, #f8f6fc, #fefefe); */
     background: url(./images/white_abstract_background-wallpaper-1366x768.jpg) no-repeat;
-    /* background-position: fixed; */
     color: #000;
     font-family: 'Ubuntu', sans-serif;
 }
@@ -212,6 +214,23 @@ nav {
     color: crimson;
 }
 
+.Home .homecon a {
+    display: inline-block;
+    text-decoration: none;
+    font-size: calc(1vw + 1.5rem);
+    color: black;
+    background-color: #5f9341;
+    padding: 10px;
+    border-radius: 8px;
+    transform: translateY(2rem);
+}
+
+.Home .homecon a:hover {
+    color: #fff;
+    outline: 4px #5f9341 solid;
+    outline-offset: -4px;
+    background: none;
+}
 
 @media only screen and (max-width: 980px) {
     .nav .menubar {
@@ -276,6 +295,7 @@ nav {
         height: 80vh;
         transform: translateX(100%);
         transition: transform .5s linear;
+        z-index: 999;
     }
 
     .nav ul li a {
