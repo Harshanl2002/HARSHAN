@@ -8,3 +8,12 @@ mnbar.onclick = () => {
     mnbar.children[2].classList.toggle("t3")
     lo.classList.toggle("dis1")
 }
+$(document).ready(() => {
+    $(window).scroll(() => {
+        if (this.scrollY > 20) {
+            $('.nav').addClass("sticky");
+        } else {
+            $('.nav').removeClass("sticky");
+        }
+    })
+})

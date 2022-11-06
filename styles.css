@@ -8,7 +8,7 @@
 
 :root {
     --pc: #050505;
-    --sc: #fff;
+    --sc: #5f9341;
 }
 
 html {
@@ -30,10 +30,15 @@ body {
 
     width: 100%;
     height: 10vh;
-    position: sticky;
-    background: crimson;
+    position: fixed;
+    /* background: var(--sc); */
     /* background-color: rgb(247, 240, 240, .2); */
+    /* background-color: transparent; */
     animation: nav 0.5s linear;
+}
+
+.sticky {
+    background-color: #5f9341;
 }
 
 nav {
@@ -44,6 +49,7 @@ nav {
     display: flex;
     justify-content: space-between;
     opacity: 1;
+    transition: all .3s ease;
 }
 
 .nav .logo {
@@ -54,7 +60,11 @@ nav {
     font-weight: 600;
     text-transform: uppercase;
     font-family: 'Ubuntu', sans-serif;
-    color: var(--sc);
+    color: black;
+}
+
+.sticky .logo {
+    color: #fff;
 }
 
 .nav ul {
@@ -73,7 +83,18 @@ nav {
     font-size: 1.8rem;
     padding-bottom: 8px;
     text-decoration: none;
-    color: var(--sc);
+    color: black;
+    font-family: 'Poppins', sans-serif;
+    text-transform: uppercase;
+    display: inline-block;
+    position: relative;
+}
+
+.sticky ul li a {
+    font-size: 1.8rem;
+    padding-bottom: 8px;
+    text-decoration: none;
+    color: #fff;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     display: inline-block;
@@ -94,7 +115,36 @@ nav {
     transition: transform 0.25s ease-out;
 }
 
+.sticky ul li a:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    border-radius: 4px;
+    bottom: 0;
+    left: 0;
+    background-color: #fff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.nav ul li a:hover {
+    color: var(--sc);
+    transition: all .3s ease;
+}
+
+.sticky ul li a:hover {
+    color: #d4af37;
+    transition: all .3s ease;
+}
+
 .nav ul li a:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+.sticky ul li a:hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
 }
@@ -115,11 +165,55 @@ nav {
     display: block;
     width: 30px;
     border-radius: 4px;
-    background-color: var(--sc);
+    background-color: black;
     /* display: none; */
 }
 
-@media only screen and (max-width: 900px) {
+.sticky .menubar span {
+    background-color: #fff;
+}
+
+/* home sec */
+.Home {
+    height: 100vh;
+    min-height: 500px;
+    width: 100%;
+    display: flex;
+    /* background-image: radial-gradient(circle, #d1e7fe, #d4e3fe, #d9defc, #dfd9f9, #e5d4f4, #e8d6f3, #ebd8f3, #eedaf2, #f0e4f7, #f3edfa, #f8f6fc, #fefefe); */
+    background: url(./images/white_abstract_background-wallpaper-1366x768.jpg) no-repeat;
+    /* background-position: fixed; */
+    color: #000;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.Home .max {
+    margin: auto 0 auto 40px;
+}
+
+.Home .homecon {
+    display: flex;
+}
+
+.Home .homecon .cls .text-1 {
+    font-size: calc(1vw + 1.5rem);
+}
+
+.Home .homecon .cls .text-2 {
+    font-size: calc(1vw + 5.5rem);
+    font-weight: 500;
+    /* text-transform: uppercase; */
+}
+
+.Home .homecon .cls .text-3 {
+    font-size: calc(1vw + 2.5rem);
+}
+
+.Home .homecon .cls .text-3 span {
+    color: crimson;
+}
+
+
+@media only screen and (max-width: 980px) {
     .nav .menubar {
         display: none;
     }
@@ -132,14 +226,18 @@ nav {
         font-size: clac(1vw + 1em);
     }
 
+    .nav ul {
+        width: 80vh;
+    }
+
     .nav ul li a {
-        font-size: clac(1vw - .5rem);
+        font-size: clac(1vw - .2rem);
     }
 }
 
-@media only screen and (max-width: 650px) {
+@media only screen and (max-width: 700px) {
     .nav {
-        background-color: crimson;
+        /* background-color: var(--sc); */
         margin: 0;
         text-align: center;
     }
@@ -157,13 +255,25 @@ nav {
     }
 
     .nav ul {
-        background-color: black;
+        background-color: #fff;
         width: 100%;
         position: fixed;
         top: 10vh;
         right: 0px;
         flex-direction: column;
-        height: 90vh;
+        height: 80vh;
+        transform: translateX(100%);
+        transition: transform .5s linear;
+    }
+
+    .sticky ul {
+        background-color: #5f9341;
+        width: 100%;
+        position: fixed;
+        top: 10vh;
+        right: 0px;
+        flex-direction: column;
+        height: 80vh;
         transform: translateX(100%);
         transition: transform .5s linear;
     }
@@ -174,14 +284,30 @@ nav {
         padding: 6vw;
     }
 
-    .nav ul li a:hover {
+    /* .nav ul li a:hover {
         font-size: 4vh;
-        color: rgb(19, 222, 236);
+        color:c;
         transition: all .5s linear;
-    }
+    } */
 
     .nav ul li a:hover::after {
         display: none;
+    }
+
+    .Home .homecon .cls .text-1 {
+        font-size: 1.8rem;
+    }
+
+    .Home .homecon .cls .text-2 {
+        font-size: 4rem;
+    }
+
+    .Home .homecon .cls .text-3 {
+        font-size: 2rem;
+    }
+
+    .Home .max {
+        transform: translateX(-40px);
     }
 }
 
@@ -206,7 +332,11 @@ nav {
 }
 
 .dis1 {
-    background-color: black;
+    background-color: white;
+}
+
+.sticky {
+    background-color: #5f9341;
 }
 
 @keyframes nav {
