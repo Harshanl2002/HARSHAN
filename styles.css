@@ -81,10 +81,10 @@ html {
 }
 
 .nav .menubar {
-    height: 2vh;
+    height: 3.5vh;
     display: flex;
-    justify-content: space-between;
-    transform: translatey(19px);
+    justify-content: space-around;
+    transform: translate(-10px, 15px);
     cursor: pointer;
     flex-direction: column;
     display: none;
@@ -97,6 +97,7 @@ html {
     width: 30px;
     border-radius: 4px;
     background-color: #000;
+    /* display: none; */
 }
 
 @media only screen and (max-width: 900px) {
@@ -124,15 +125,14 @@ html {
     }
 
     .nav .logo {
-        margin-top: 2vh;
-        margin-left: 30vw;
         text-align: center;
-        font-size: calc(1vw + 1.2rem);
+        font-size: calc(1vw + 1.8rem);
     }
 
     .nav .menubar {
         display: block;
-        transform: translate(-10px, 20px);
+        /* transform: translate(-10px, 12px); */
+        border: 1px #000 solid;
         transition: all .5s linear;
     }
 
