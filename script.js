@@ -17,3 +17,10 @@ $(document).ready(() => {
         }
     })
 })
+//typed 
+var typed = new typed('type', {
+    string: ['Developer', 'Designer', 'Frontend-Developer', 'Fast Learner', 'Circuit-Analysier'],
+    typeSpeed: 100,
+    backSpeed: 60,
+    loop: true
+});

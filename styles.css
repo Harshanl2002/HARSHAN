@@ -184,12 +184,14 @@ nav {
     width: 100%;
     display: flex;
     background: url(./images/white_abstract_background-wallpaper-1366x768.jpg) no-repeat;
+    background-attachment: fixed;
     color: #000;
     font-family: 'Ubuntu', sans-serif;
 }
 
-.Home .max {
+.max {
     margin: auto 0 auto 40px;
+    height: 50vh;
 }
 
 .Home .homecon {
@@ -219,7 +221,7 @@ nav {
     text-decoration: none;
     font-size: calc(1vw + 1.5rem);
     color: black;
-    background-color: #5f9341;
+    background-color: crimson;
     padding: 10px;
     border-radius: 8px;
     transform: translateY(2rem);
@@ -227,11 +229,54 @@ nav {
 
 .Home .homecon a:hover {
     color: #fff;
-    outline: 4px #5f9341 solid;
+    outline: 4px crimson solid;
     outline-offset: -4px;
     background: none;
 }
 
+.about {
+    font-family: 'poppins', sans-serif;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*mediaquarry and animation*/
 @media only screen and (max-width: 980px) {
     .nav .menubar {
         display: none;
@@ -326,7 +371,7 @@ nav {
         font-size: 2rem;
     }
 
-    .Home .max {
+    .max {
         transform: translateX(-40px);
     }
 }
